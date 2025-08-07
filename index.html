@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Срочный Электрик Алматы | Астана 24/7 | Профессиональные Услуги</title>
+    <meta name="description" content="Срочный вызов электрика в Алматы и Астане 24/7. Аварийный электрик, электромонтажные работы, установка розеток. Недорого, быстро, профессионально.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        // Custom Tailwind config to match the eco-service.kz design
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'eco-green': '#57a950',
+                        'eco-green-dark': '#4b9846',
+                        'eco-gray': '#f8f8f8',
+                        'eco-dark': '#333333',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        /* General styling for a professional look */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f8f8;
+        }
+        .message-box {
+            position: fixed;
+            top: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 100;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body class="font-sans text-eco-dark">
+    <!-- Message Box for form submissions -->
+    <div id="message-box" class="hidden message-box bg-eco-green text-white"></div>
+
+    <!-- Language Switcher -->
+    <div class="fixed top-4 right-4 z-50 bg-white rounded-lg shadow-lg p-1">
+        <button onclick="switchLanguage('ru')" id="lang-ru" class="px-2 py-1 rounded text-sm bg-eco-green text-white transition-colors duration-200">RU</button>
+        <button onclick="switchLanguage('kz')" id="lang-kz" class="px-2 py-1 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors duration-200">ҚАЗ</button>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="bg-white py-16 px-4">
+        <div class="container mx-auto max-w-4xl text-center">
+            <div class="mb-6">
+                <i class="fas fa-bolt text-eco-green text-6xl mb-4 animate-pulse"></i>
+            </div>
+            
+            <!-- Russian Content -->
+            <div class="lang-content lang-ru">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4 text-eco-dark">
+                    Срочный Электрик 24/7
+                    <span class="block text-eco-green">Алматы | Астана</span>
+                </h1>
+                <p class="text-lg md:text-xl mb-8 text-gray-600">
+                    Аварийный вызов электрика на дом • Профессионально • Недорого • Круглосуточно
+                </p>
+                <div class="space-y-4 md:space-y-0 md:space-x-4 md:flex md:justify-center">
+                    <button onclick="scrollToForm()" class="w-full md:w-auto bg-eco-green hover:bg-eco-green-dark text-white font-bold py-4 px-8 rounded-lg text-lg shadow-md transform hover:scale-105 transition-all">
+                        <i class="fas fa-phone mr-2"></i>Вызвать Электрика
+                    </button>
+                    <a href="tel:+77771234567" class="w-full md:w-auto bg-gray-200 hover:bg-gray-300 text-eco-dark font-bold py-4 px-8 rounded-lg text-lg shadow-md transform hover:scale-105 transition-all">
+                        <i class="fas fa-phone-alt mr-2"></i>+7 777 123 45 67
+                    </a>
+                </div>
+            </div>
+
+            <!-- Kazakh Content -->
+            <div class="lang-content lang-kz hidden">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4 text-eco-dark">
+                    Шұғыл Электрик 24/7
+                    <span class="block text-eco-green">Алматы | Астана</span>
+                </h1>
+                <p class="text-lg md:text-xl mb-8 text-gray-600">
+                    Апаттық электрикті үйге шақыру • Кәсіби • Арзан • Тәулік бойы
+                </p>
+                <div class="space-y-4 md:space-y-0 md:space-x-4 md:flex md:justify-center">
+                    <button onclick="scrollToForm()" class="w-full md:w-auto bg-eco-green hover:bg-eco-green-dark text-white font-bold py-4 px-8 rounded-lg text-lg shadow-md transform hover:scale-105 transition-all">
+                        <i class="fas fa-phone mr-2"></i>Электрик Шақыру
+                    </button>
+                    <a href="tel:+77771234567" class="w-full md:w-auto bg-gray-200 hover:bg-gray-300 text-eco-dark font-bold py-4 px-8 rounded-lg text-lg shadow-md transform hover:scale-105 transition-all">
+                        <i class="fas fa-phone-alt mr-2"></i>+7 777 123 45 67
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Trust Indicators -->
+    <section class="py-8 bg-eco-gray border-b border-gray-200">
+        <div class="container mx-auto max-w-6xl px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="flex flex-col items-center justify-center space-y-2">
+                    <i class="fas fa-clock text-eco-green text-3xl"></i>
+                    <div class="lang-content lang-ru">
+                        <span class="font-semibold text-sm md:text-base">Прибытие за 30 мин</span>
+                    </div>
+                    <div class="lang-content lang-kz hidden">
+                        <span class="font-semibold text-sm md:text-base">30 минутта келу</span>
+                    </div>
+                </div>
+                <div class="flex flex-col items-center justify-center space-y-2">
+                    <i class="fas fa-shield-alt text-eco-green text-3xl"></i>
+                    <div class="lang-content lang-ru">
+                        <span class="font-semibold text-sm md:text-base">Гарантия на работы</span>
+                    </div>
+                    <div class="lang-content lang-kz hidden">
+                        <span class="font-semibold text-sm md:text-base">Жұмысқа кепілдік</span>
+                    </div>
+                </div>
+                <div class="flex flex-col items-center justify-center space-y-2">
+                    <i class="fas fa-star text-eco-green text-3xl"></i>
+                    <div class="lang-content lang-ru">
+                        <span class="font-semibold text-sm md:text-base">500+ довольных клиентов</span>
+                    </div>
+                    <div class="lang-content lang-kz hidden">
+                        <span class="font-semibold text-sm md:text-base">500+ мemnun клиент</span>
+                    </div>
+                </div>
+                <div class="flex flex-col items-center justify-center space-y-2">
+                    <i class="fas fa-tools text-eco-green text-3xl"></i>
+                    <div class="lang-content lang-ru">
+                        <span class="font-semibold text-sm md:text-base">Опыт 10+ лет</span>
+                    </div>
+                    <div class="lang-content lang-kz hidden">
+                        <span class="font-semibold text-sm md:text-base">10+ жыл тәжірибе</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto max-w-6xl px-4">
+            <div class="text-center mb-12">
+                <div class="lang-content lang-ru">
+                    <h2 class="text-3xl md:text-4xl font-bold text-eco-dark mb-4">Наши Услуги</h2>
+                    <p class="text-lg text-gray-600">Профессиональные электромонтажные работы в Алматы и Астане</p>
+                </div>
+                <div class="lang-content lang-kz hidden">
+                    <h2 class="text-3xl md:text-4xl font-bold text-eco-dark mb-4">Біздің Қызметтер</h2>
+                    <p class="text-lg text-gray-600">Алматы мен Астанадағы кәсіби электр монтаждау жұмыстары</p>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service Card 1 -->
+                <div class="bg-eco-gray rounded-xl p-6 hover:shadow-lg transition-shadow border border-gray-200">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-plug text-eco-green text-4xl mb-3"></i>
+                    </div>
+                    <div class="lang-content lang-ru">
+                        <h3 class="text-xl font-bold mb-2 text-eco-dark">Установка Розеток</h3>
+                        <p class="text-gray-600 mb-4">Профессиональная установка розеток и выключателей любой сложности. Быстро и качественно.</p>
+                    </div>
+                    <div class="lang-content lang-kz hidden">
+                        <h3 class="text-xl font-bold mb-2 text-eco-dark">Розеткаларды Орнату</h3>
+                        <p class="text-gray-600 mb-4">Кез келген күрделіліктегі розеткалар мен ажыратқыштарды кәсіби орнату. Жылдам және сапалы.</p>
+                    </div>
+                    <div class="text-eco-green font-semibold text-lg">От 3,000 ₸</div>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="bg-eco-gray rounded-xl p-6 hover:shadow-lg transition-shadow border border-gray-200">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-home text-eco-green text-4xl mb-3"></i>
+                    </div>
+                    <div class="lang-content lang-ru">
+                        <h3 class="text-xl font-bold mb-2 text-eco-dark">Электромонтаж Квартиры</h3>
+                        <p class="text-gray-600 mb-4">Полный электромонтаж квартир и домов. Монтаж электропроводки под ключ с гарантией.</p>
+                    </div>
+                    <div class="lang-content lang-kz hidden">
+                        <h3 class="text-xl font-bold mb-2 text-eco-dark">Пәтердің Электр Монтажы</h3>
+                        <p class="text-gray-600 mb-4">Пәтерлер мен үйлердің толық электр монтажы. Кепілдікпен кілт тапсыру электр өткізгіш монтажы.</p>
+                    </div>
+                    <div class="text-eco-green font-semibold text-lg">От 50,000 ₸</div>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="bg-eco-gray rounded-xl p-6 hover:shadow-lg transition-shadow border border-gray-200">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-exclamation-triangle text-eco-green text-4xl mb-3"></i>
+                    </div>
+                    <div class="lang-content lang-ru">
+                        <h3 class="text-xl font-bold mb-2 text-eco-dark">Аварийный Ремонт</h3>
+                        <p class="text-gray-600 mb-4">Срочное устранение неисправностей электропроводки. Ремонт электрики 24/7.</p>
+                    </div>
+                    <div class="lang-content lang-kz hidden">
+                        <h3 class="text-xl font-bold mb-2 text-eco-dark">Апаттық Жөндеу</h3>
+                        <p class="text-gray-600 mb-4">Электр өткізгіштің ақауларын шұғыл жою. Электрикті 24/7 жөндеу.</p>
+                    </div>
+                    <div class="text-eco-green font-semibold text-lg">От 5,000 ₸</div>
+                </div>
+
+                <!-- Service Card 4 -->
+                <div class="bg-eco-gray rounded-xl p-6 hover:shadow-lg transition-shadow border border-gray-200">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-calculator text-eco-green text-4xl mb-3"></i>
+                    </div>
+                    <div class="lang-content lang-ru">
+                        <h3 class="text-xl font-bold mb-2 text-eco-dark">Сборка Электрощитов</h3>
+                        <p class="text-gray-600 mb-4">Профессиональная сборка и монтаж электрощитов. Подключение автоматов и УЗО.</p>
+                    </div>
+                    <div class="lang-content lang-kz hidden">
+                        <h3 class="text-xl font-bold mb-2 text-eco-dark">Электр Қалқандарын Жинау</h3>
+                        <p class="text-gray-600 mb-4">Электр қалқандарын кәсіби жинау және монтаждау. Автоматтар мен АЖҚ қосу.</p>
+                    </div>
+                    <div class="text-eco-green font-semibold text-lg">От 15,000 ₸</div>
+                </div>
+
+                <!-- Service Card 5 -->
+                <div class="bg-eco-gray rounded-xl p-6 hover:shadow-lg transition-shadow border border-gray-200">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-lightbulb text-eco-green text-4xl mb-3"></i>
+                    </div>
+                    <div class="lang-content lang-ru">
+                        <h3 class="text-xl font-bold mb-2 text-eco-dark">Подключение Электроплиты</h3>
+                        <p class="text-gray-600 mb-4">Безопасное подключение электроплит и бойлеров. Установка силовых розеток.</p>
+                    </div>
+                    <div class="lang-content lang-kz hidden">
+                        <h3 class="text-xl font-bold mb-2 text-eco-dark">Электр Плитасын Қосу</h3>
+                        <p class="text-gray-600 mb-4">Электр плиталары мен бойлерлерді қауіпсіз қосу. Күштік розеткаларды орнату.</p>
+                    </div>
+                    <div class="text-eco-green font-semibold text-lg">От 8,000 ₸</div>
+                </div>
+
+                <!-- Service Card 6 -->
+                <div class="bg-eco-gray rounded-xl p-6 hover:shadow-lg transition-shadow border border-gray-200">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-search text-eco-green text-4xl mb-3"></i>
+                    </div>
+                    <div class="lang-content lang-ru">
+                        <h3 class="text-xl font-bold mb-2 text-eco-dark">Диагностика Проводки</h3>
+                        <p class="text-gray-600 mb-4">Комплексная диагностика электропроводки. Поиск скрытых неисправностей.</p>
+                    </div>
+                    <div class="lang-content lang-kz hidden">
+                        <h3 class="text-xl font-bold mb-2 text-eco-dark">Өткізгіш Диагностикасы</h3>
+                        <p class="text-gray-600 mb-4">Электр өткізгіштің кешенді диагностикасы. Жасырын ақауларды іздеу.</p>
+                    </div>
+                    <div class="text-eco-green font-semibold text-lg">От 7,000 ₸</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing/Quote Section -->
+    <section id="quote-form" class="py-16 bg-eco-gray">
+        <div class="container mx-auto max-w-4xl px-4">
+            <div class="text-center mb-12">
+                <div class="lang-content lang-ru">
+                    <h2 class="text-3xl md:text-4xl font-bold text-eco-dark mb-4">Узнать Стоимость</h2>
+                    <p class="text-lg text-gray-600">Оставьте заявку и получите точную стоимость работ за 5 минут</p>
+                </div>
+                <div class="lang-content lang-kz hidden">
+                    <h2 class="text-3xl md:text-4xl font-bold text-eco-dark mb-4">Құнын Білу</h2>
+                    <p class="text-lg text-gray-600">Өтініш қалдырып, жұмыстардың дәл құнын 5 минутта алыңыз</p>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-xl p-8 shadow-md">
+                <form id="quote-form-element" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">
+                                <span class="lang-content lang-ru">Ваше имя *</span>
+                                <span class="lang-content lang-kz hidden">Сіздің атыңыз *</span>
+                            </label>
+                            <input type="text" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-eco-green focus:border-transparent">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">
+                                <span class="lang-content lang-ru">Телефон *</span>
+                                <span class="lang-content lang-kz hidden">Телефон *</span>
+                            </label>
+                            <input type="tel" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-eco-green focus:border-transparent" placeholder="+7 777 123 45 67">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-gray-700 font-semibold mb-2">
+                            <span class="lang-content lang-ru">Город</span>
+                            <span class="lang-content lang-kz hidden">Қала</span>
+                        </label>
+                        <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-eco-green focus:border-transparent">
+                            <option class="lang-content lang-ru">Алматы</option>
+                            <option class="lang-content lang-ru">Астана</option>
+                            <option class="lang-content lang-kz hidden">Алматы</option>
+                            <option class="lang-content lang-kz hidden">Астана</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-gray-700 font-semibold mb-2">
+                            <span class="lang-content lang-ru">Описание работ *</span>
+                            <span class="lang-content lang-kz hidden">Жұмыстардың сипаттамасы *</span>
+                        </label>
+                        <textarea required rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-eco-green focus:border-transparent" placeholder="Например: Установка 3 розеток в спальне, замена выключателя в коридоре"></textarea>
+                    </div>
+                    
+                    <div class="text-center">
+                        <button type="submit" class="w-full md:w-auto bg-eco-green hover:bg-eco-green-dark text-white font-bold py-4 px-8 rounded-lg text-lg shadow-md transform hover:scale-105 transition-all">
+                            <i class="fas fa-calculator mr-2"></i>
+                            <span class="lang-content lang-ru">Рассчитать Стоимость</span>
+                            <span class="lang-content lang-kz hidden">Құнын Есептеу</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-eco-dark text-gray-300 py-8 text-center">
+        <div class="container mx-auto px-4">
+            <div class="lang-content lang-ru">
+                <p>&copy; 2024 Электрик Алматы | Астана. Все права защищены. Лицензированные электромонтажные работы.</p>
+            </div>
+            <div class="lang-content lang-kz hidden">
+                <p>&copy; 2024 Электрик Алматы | Астана. Барлық құқықтар қорғалған. Лицензияланған электр монтаж жұмыстары.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let currentLang = 'ru';
+
+        function switchLanguage(lang) {
+            currentLang = lang;
+            
+            // Hide all content
+            document.querySelectorAll('.lang-content').forEach(el => {
+                el.classList.add('hidden');
+            });
+            
+            // Show selected language content
+            document.querySelectorAll('.lang-' + lang).forEach(el => {
+                el.classList.remove('hidden');
+            });
+            
+            // Update language buttons
+            document.getElementById('lang-ru').className = lang === 'ru' ? 
+                'px-2 py-1 rounded text-sm bg-eco-green text-white transition-colors duration-200' : 
+                'px-2 py-1 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors duration-200';
+            
+            document.getElementById('lang-kz').className = lang === 'kz' ? 
+                'px-2 py-1 rounded text-sm bg-eco-green text-white transition-colors duration-200' : 
+                'px-2 py-1 rounded text-sm text-gray-600 hover:bg-gray-100 transition-colors duration-200';
+        }
+
+        function scrollToForm() {
+            document.getElementById('quote-form').scrollIntoView({ 
+                behavior: 'smooth' 
+            });
+        }
+
+        function showMessage(message, type = 'success') {
+            const msgBox = document.getElementById('message-box');
+            msgBox.textContent = message;
+            msgBox.classList.remove('hidden', 'bg-red-500', 'bg-eco-green');
+            msgBox.classList.add(type === 'success' ? 'bg-eco-green' : 'bg-red-500');
+            msgBox.classList.remove('opacity-0', 'invisible');
+            msgBox.classList.add('opacity-100', 'visible');
+
+            setTimeout(() => {
+                msgBox.classList.remove('opacity-100', 'visible');
+                msgBox.classList.add('opacity-0', 'invisible');
+            }, 3000);
+        }
+
+        // Form submissions
+        document.getElementById('quote-form-element').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const message = currentLang === 'ru' ? 
+                'Спасибо! Мы свяжемся с вами в течение 5 минут для расчета стоимости.' :
+                'Рахмет! Құнды есептеу үшін біз сізбен 5 минут ішінде хабарласамыз.';
+            showMessage(message);
+        });
+
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const message = currentLang === 'ru' ? 
+                'Сообщение отправлено! Мы свяжемся с вами в ближайшее время.' :
+                'Хабар жіберілді! Біз сізбен жақын арада хабарласамыз.';
+            showMessage(message);
+        });
+
+        // Initialize with Russian
+        switchLanguage('ru');
+    </script>
+</body>
+</html>
+
